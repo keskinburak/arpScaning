@@ -78,6 +78,7 @@ def main():
     config.read('config.conf')
     isFirstTime=config['DEFAULT']['isFirstTime']
     if(isFirstTime==True):
+	config['DEFAULT']['isFirstTime']=False
         arp=arping()
 	createList(arp)
     else:
